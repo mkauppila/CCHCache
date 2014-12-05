@@ -103,9 +103,19 @@
 			name = Xcconfig;
 			sourceTree = "<group>";
 		};
+		475D6E831A3230F600D44CA8 /* CCHCache */ = {
+			isa = PBXGroup;
+			children = (
+				475D6E801A3230E400D44CA8 /* CCHCache.h */,
+				475D6E811A3230E400D44CA8 /* CCHCache.m */,
+			);
+			name = CCHCache;
+			sourceTree = "<group>";
+		};
 		4761E6111A2BAB5600B5D66A = {
 			isa = PBXGroup;
 			children = (
+				475D6E831A3230F600D44CA8 /* CCHCache */,
 				475D6E471A322F9800D44CA8 /* ExampleApp */,
 				475D6E461A322F9800D44CA8 /* Products */,
 			);
@@ -193,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				475D6E821A3230E400D44CA8 /* CCHCache.m in Sources */,
+				475D6E7B1A32308C00D44CA8 /* ExampleAppTests.m in Sources */,
 				475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */,
 				475D6E781A32305100D44CA8 /* main.m in Sources */,
 				475D6E791A32305100D44CA8 /* ViewController.m in Sources */,
