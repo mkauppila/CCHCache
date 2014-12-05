@@ -112,9 +112,22 @@
 			name = CCHCache;
 			sourceTree = "<group>";
 		};
+		475D6E901A3241A200D44CA8 /* Xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				475D6E881A32419B00D44CA8 /* Project.xcconfig */,
+				475D6E861A32419B00D44CA8 /* App-Debug.xcconfig */,
+				475D6E891A32419B00D44CA8 /* Tests-Debug.xcconfig */,
+				475D6E871A32419B00D44CA8 /* App-Release.xcconfig */,
+				475D6E8A1A32419B00D44CA8 /* Tests-Release.xcconfig */,
+			);
+			name = Xcconfig;
+			sourceTree = "<group>";
+		};
 		4761E6111A2BAB5600B5D66A = {
 			isa = PBXGroup;
 			children = (
+				475D6E901A3241A200D44CA8 /* Xcconfig */,
 				475D6E831A3230F600D44CA8 /* CCHCache */,
 				475D6E471A322F9800D44CA8 /* ExampleApp */,
 				475D6E461A322F9800D44CA8 /* Products */,
@@ -178,6 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				475D6E751A32305100D44CA8 /* Base.lproj in Resources */,
+				475D6E8E1A32419B00D44CA8 /* Tests-Debug.xcconfig in Resources */,
+				475D6E8D1A32419B00D44CA8 /* Project.xcconfig in Resources */,
+				475D6E8F1A32419B00D44CA8 /* Tests-Release.xcconfig in Resources */,
+				475D6E8C1A32419B00D44CA8 /* App-Release.xcconfig in Resources */,
 				475D6E761A32305100D44CA8 /* Images.xcassets in Resources */,
 				475D6E771A32305100D44CA8 /* Info.plist in Resources */,
 				475D6E8E1A32419B00D44CA8 /* Tests-Debug.xcconfig in Resources */,
@@ -192,6 +209,13 @@
 				475D6E8C1A32419B00D44CA8 /* App-Release.xcconfig in Resources */,
 				47A3969D1A3395860017736E /* LaunchScreen.xib in Resources */,
 				475D6E8B1A32419B00D44CA8 /* App-Debug.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475D6E5C1A322F9800D44CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +258,7 @@
 /* Begin XCBuildConfiguration section */
 		475D6E661A322F9800D44CA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475D6E861A32419B00D44CA8 /* App-Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -279,6 +304,7 @@
 		};
 		475D6E671A322F9800D44CA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475D6E871A32419B00D44CA8 /* App-Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -318,6 +344,7 @@
 		};
 		475D6E681A322F9800D44CA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475D6E891A32419B00D44CA8 /* Tests-Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -367,6 +394,7 @@
 		};
 		475D6E691A322F9800D44CA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475D6E8A1A32419B00D44CA8 /* Tests-Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,12 +438,14 @@
 		};
 		4761E6161A2BAB5600B5D66A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475D6E881A32419B00D44CA8 /* Project.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		4761E6171A2BAB5600B5D66A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475D6E881A32419B00D44CA8 /* Project.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
