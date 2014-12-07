@@ -31,7 +31,7 @@
     return self;
 }
 
-- (id<NSCopying>)objectForKey:(__unused NSString *)key
+- (void)objectForKey:(__unused NSString *)key
                withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
     return nil;
@@ -40,11 +40,6 @@
 - (void)setObject:(__unused id <NSCopying>)object
            forKey:(__unused NSString *)key
    withCompletion:(__unused CCHCacheCompletionBlock)completion
-{
-}
-
-- (void)removeObjectForKey:(__unused NSString *)key
-            withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
 }
 

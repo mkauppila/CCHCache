@@ -17,7 +17,7 @@
 
 #pragma mark - Public API
 
-- (id<NSCopying>)objectForKey:(NSString *)key
+- (void)objectForKey:(NSString *)key
                withCompletion:(CCHCacheCompletionBlock)completion;
 
 - (void)setObject:(id <NSCopying>)object

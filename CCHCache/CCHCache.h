@@ -20,7 +20,7 @@ typedef void (^CCHCacheCompletionBlock)(NSString *key, id <NSCopying> value);
                              forName:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
 /// Retrieve object for `key`
-- (id<NSCopying>)objectForKey:(NSString *)key
+- (void)objectForKey:(NSString *)key
                withCompletion:(CCHCacheCompletionBlock)completion;
 
 /// Store `object` for a `key`
