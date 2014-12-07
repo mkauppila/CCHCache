@@ -13,6 +13,8 @@
 @property (nonatomic, assign, readonly) NSUInteger memoryCacheSizeInBytes;
 @property (nonatomic, assign, readonly) NSUInteger diskCacheSizeInBytes;
 
+@property (nonatomic, strong, readonly) CCHMemoryCache *memoryCache;
+
 @end
 
 @implementation CCHCache
@@ -28,19 +30,37 @@
     _memoryCacheSizeInBytes = memoryCacheSizeInBytes;
     _diskCacheSizeInBytes = diskCacheSizeInBytes;
 
+    _memoryCache = [[CCHMemoryCache alloc] initWithSize:_memoryCacheSizeInBytes
+                                               withName:name];
+
     return self;
 }
 
-- (void)objectForKey:(__unused NSString *)key
-               withCompletion:(__unused CCHCacheCompletionBlock)completion
+- (void)objectForKey:(NSString *)key
+      withCompletion:(CCHCacheCompletionBlock)completion
 {
+
+    void (^memoryCacheCompletion)(NSString *, id<NSCopying>) = ^(NSString *key, id<NSCopying> value) {
+
+    };
+
+    [self.memoryCache objectForKey:key
+                    withCompletion:memoryCacheCompletion];
+
     return nil;
 }
 
-- (void)setObject:(__unused id <NSCopying>)object
-           forKey:(__unused NSString *)key
-   withCompletion:(__unused CCHCacheCompletionBlock)completion
+- (void)setObject:(id <NSCopying>)object
+           forKey:(NSString *)key
+   withCompletion:(CCHCacheCompletionBlock)completion
 {
+    void (^memoryCacheCompletion)(NSString *, id<NSCopying>) = ^(NSString *key, id<NSCopying> value) {
+
+    };
+
+    [self.memoryCache setObject:object
+                         forKey:key
+                 withCompletion:memoryCacheCompletion];
 }
 
 @end
