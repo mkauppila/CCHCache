@@ -21,7 +21,6 @@
 		47A396981A3395260017736E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47A396971A3395260017736E /* Info.plist */; };
 		47A3969D1A3395860017736E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A396991A3395860017736E /* LaunchScreen.xib */; };
 		47A3969E1A3395860017736E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3969B1A3395860017736E /* Main.storyboard */; };
-		47A396A81A3398ED0017736E /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A396A71A3398ED0017736E /* Tests.m */; };
 		47A396CB1A33992C0017736E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A396C31A3399170017736E /* Quick.framework */; };
 		47A3970D1A33A35F0017736E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A397061A33A2BF0017736E /* Nimble.framework */; };
 		47A3971D1A33A70D0017736E /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A3971C1A33A70D0017736E /* SwiftSpec.swift */; };
@@ -108,7 +107,6 @@
 		47A3969C1A3395860017736E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Example/ExampleApp/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		47A396A31A3398ED0017736E /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A396A61A3398ED0017736E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47A396A71A3398ED0017736E /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		47A396BB1A3399170017736E /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Vendor/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
 		47A396FE1A33A2BF0017736E /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Vendor/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		47A3971B1A33A70C0017736E /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 			children = (
 				47A396FE1A33A2BF0017736E /* Nimble.xcodeproj */,
 				47A396BB1A3399170017736E /* Quick.xcodeproj */,
-				47A396A71A3398ED0017736E /* Tests.m */,
 				47112FB61A34D19C000359A1 /* CCHMemoryCacheSpec.m */,
 				47A396A51A3398ED0017736E /* Supporting Files */,
 			);
@@ -438,7 +435,6 @@
 			files = (
 				47112FB71A34D19C000359A1 /* CCHMemoryCacheSpec.m in Sources */,
 				47A3971D1A33A70D0017736E /* SwiftSpec.swift in Sources */,
-				47A396A81A3398ED0017736E /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
