@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47112FAD1A34CD18000359A1 /* CCHMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47112FAC1A34CD18000359A1 /* CCHMemoryCache.m */; };
 		475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E6D1A32305100D44CA8 /* AppDelegate.m */; };
 		475D6E781A32305100D44CA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E711A32305100D44CA8 /* main.m */; };
 		475D6E791A32305100D44CA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E731A32305100D44CA8 /* ViewController.m */; };
@@ -85,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47112FAB1A34CD18000359A1 /* CCHMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHMemoryCache.h; sourceTree = "<group>"; };
+		47112FAC1A34CD18000359A1 /* CCHMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHMemoryCache.m; sourceTree = "<group>"; };
 		475D6E451A322F9800D44CA8 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475D6E6C1A32305100D44CA8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Example/ExampleApp/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		475D6E6D1A32305100D44CA8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Example/ExampleApp/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -106,7 +109,6 @@
 		47A396A71A3398ED0017736E /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		47A396BB1A3399170017736E /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Vendor/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
 		47A396FE1A33A2BF0017736E /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Vendor/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
-		47A3970E1A33A36D0017736E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		47A3971B1A33A70C0017736E /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		47A3971C1A33A70D0017736E /* SwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,8 @@
 			children = (
 				475D6E801A3230E400D44CA8 /* CCHCache.h */,
 				475D6E811A3230E400D44CA8 /* CCHCache.m */,
+				47112FAB1A34CD18000359A1 /* CCHMemoryCache.h */,
+				47112FAC1A34CD18000359A1 /* CCHMemoryCache.m */,
 			);
 			name = CCHCache;
 			sourceTree = "<group>";
@@ -187,7 +191,6 @@
 		4761E6111A2BAB5600B5D66A = {
 			isa = PBXGroup;
 			children = (
-				47A3970E1A33A36D0017736E /* SenTestingKit.framework */,
 				475D6E901A3241A200D44CA8 /* Xcconfig */,
 				475D6E831A3230F600D44CA8 /* CCHCache */,
 				475D6E471A322F9800D44CA8 /* ExampleApp */,
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47112FAD1A34CD18000359A1 /* CCHMemoryCache.m in Sources */,
 				475D6E821A3230E400D44CA8 /* CCHCache.m in Sources */,
 				475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */,
 				475D6E781A32305100D44CA8 /* main.m in Sources */,
