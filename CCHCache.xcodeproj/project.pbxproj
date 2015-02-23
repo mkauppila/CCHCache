@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47112FAD1A34CD18000359A1 /* CCHMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47112FAC1A34CD18000359A1 /* CCHMemoryCache.m */; };
 		47112FB71A34D19C000359A1 /* CCHMemoryCacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47112FB61A34D19C000359A1 /* CCHMemoryCacheSpec.m */; };
+		4728990B1A9BA0F1008D96D8 /* CCHMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */; };
 		475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E6D1A32305100D44CA8 /* AppDelegate.m */; };
 		475D6E781A32305100D44CA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E711A32305100D44CA8 /* main.m */; };
 		475D6E791A32305100D44CA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E731A32305100D44CA8 /* ViewController.m */; };
@@ -86,9 +86,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		47112FAB1A34CD18000359A1 /* CCHMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHMemoryCache.h; sourceTree = "<group>"; };
-		47112FAC1A34CD18000359A1 /* CCHMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHMemoryCache.m; sourceTree = "<group>"; };
 		47112FB61A34D19C000359A1 /* CCHMemoryCacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHMemoryCacheSpec.m; sourceTree = "<group>"; };
+		472899091A9BA0F1008D96D8 /* CCHMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCHMemoryCache.h; path = CCHCache/CCHMemoryCache.h; sourceTree = "<group>"; };
+		4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHMemoryCache.m; path = CCHCache/CCHMemoryCache.m; sourceTree = "<group>"; };
 		475D6E451A322F9800D44CA8 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475D6E6C1A32305100D44CA8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Example/ExampleApp/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		475D6E6D1A32305100D44CA8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Example/ExampleApp/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -170,8 +170,8 @@
 			children = (
 				475D6E801A3230E400D44CA8 /* CCHCache.h */,
 				475D6E811A3230E400D44CA8 /* CCHCache.m */,
-				47112FAB1A34CD18000359A1 /* CCHMemoryCache.h */,
-				47112FAC1A34CD18000359A1 /* CCHMemoryCache.m */,
+				472899091A9BA0F1008D96D8 /* CCHMemoryCache.h */,
+				4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */,
 			);
 			name = CCHCache;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47112FAD1A34CD18000359A1 /* CCHMemoryCache.m in Sources */,
+				4728990B1A9BA0F1008D96D8 /* CCHMemoryCache.m in Sources */,
 				475D6E821A3230E400D44CA8 /* CCHCache.m in Sources */,
 				475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */,
 				475D6E781A32305100D44CA8 /* main.m in Sources */,
