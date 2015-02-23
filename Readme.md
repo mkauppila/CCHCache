@@ -15,6 +15,13 @@ automatically purges the least recently used items when the space fills up.
 It's also dead simple to use several caches at the same time, for instance, if
 you need to cache the images separate from the models.
 
+## CCHCache is opioniated
+- It does not purge the in-memory cache when app goes to background
+- It does not handle `UIApplicationDidReceiveMemoryWarningNotification` by default,
+instead it lets the developer decide when to purge the in-memory cache.
+- It does not encourage using only one instance of the cache hence
+  no shared singleton access
+
 ## Basic usage
 
 The simplest case:
