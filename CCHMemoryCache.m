@@ -18,7 +18,7 @@
 @implementation CCHMemoryCache
 
 - (instancetype)initWithSize:(NSUInteger)sizeInBytes
-                    withName:(NSString *)name;
+                    withName:(NSString *)name
 {
     self = [super init];
     if (self == nil) return nil;
@@ -30,15 +30,21 @@
     return self;
 }
 
-- (void)objectForKey:(NSString *)key
-               withCompletion:(CCHCacheCompletionBlock)completion
+- (void)objectForKey:(__unused NSString *)key
+               withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
 
 }
 
-- (void)setObject:(id <NSCopying>)object
-           forKey:(NSString *)key
-   withCompletion:(CCHCacheCompletionBlock)completion
+- (void)setObject:(__unused id <NSCopying>)object
+           forKey:(__unused NSString *)key
+   withCompletion:(__unused CCHCacheCompletionBlock)completion
+{
+
+}
+
+- (void)removeObjectForKey:(__unused NSString *)key
+            withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
 
 }

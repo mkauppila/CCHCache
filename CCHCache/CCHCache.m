@@ -37,30 +37,35 @@
 }
 
 - (void)objectForKey:(NSString *)key
-      withCompletion:(CCHCacheCompletionBlock)completion
+      withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
 
-    void (^memoryCacheCompletion)(NSString *, id<NSCopying>) = ^(NSString *key, id<NSCopying> value) {
+    void (^memoryCacheCompletion)(NSString *, id<NSCopying>) = ^(__unused NSString *k, __unused  id<NSCopying> v) {
 
     };
 
     [self.memoryCache objectForKey:key
                     withCompletion:memoryCacheCompletion];
-
-    return nil;
 }
 
 - (void)setObject:(id <NSCopying>)object
            forKey:(NSString *)key
-   withCompletion:(CCHCacheCompletionBlock)completion
+   withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
-    void (^memoryCacheCompletion)(NSString *, id<NSCopying>) = ^(NSString *key, id<NSCopying> value) {
+    void (^memoryCacheCompletion)(NSString *, id<NSCopying>) = ^(__unused NSString *k, __unused id<NSCopying> v) {
 
     };
 
-    [self.memoryCache setObject:object
+    [self.memoryCache setObject:object
                          forKey:key
                  withCompletion:memoryCacheCompletion];
+}
+
+
+- (void)removeObjectForKey:(__unused NSString *)key
+            withCompletion:(__unused CCHCacheCompletionBlock)completion
+{
+
 }
 
 @end
