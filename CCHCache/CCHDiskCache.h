@@ -8,6 +8,7 @@
 
 @interface CCHDiskCache : NSObject
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithSize:(NSUInteger)sizeInBytes
                     withName:(NSString *)name;
 

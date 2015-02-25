@@ -15,6 +15,7 @@ typedef void (^CCHCacheCompletionBlock)(NSString *key, id <NSCopying> value);
 /// Name of the cache. Also used as cache directory name.
 @property (nonatomic, copy, readonly) NSString *name;
 
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithInMemorySize:(NSUInteger)inMemorySizeInBytes
                          andDiskSize:(NSUInteger)diskSizeInBytes
                              forName:(NSString *)name NS_DESIGNATED_INITIALIZER;
