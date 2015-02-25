@@ -10,11 +10,15 @@
 
 #import "CCHCache.h"
 
+#import "CCHCache.h"
+
+typedef void (^CCHCacheCompletionBlock)(NSString *key, id <NSCopying> value);
+
 @interface CCHMemoryCache : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithSize:(NSUInteger)sizeInBytes
-                    withName:(NSString *)name;
+                    withName:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
 #pragma mark - Public API
 

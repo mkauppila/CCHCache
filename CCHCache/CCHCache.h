@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "CCHMemoryCache.h"
+#import "CCHDiskCache.h"
+
 typedef void (^CCHCacheCompletionBlock)(NSString *key, id <NSCopying> value);
 
 @interface CCHCache : NSObject

@@ -8,6 +8,8 @@
 
 #import "CCHCache.h"
 
+#import "CCHMemoryCache.h"
+
 @interface CCHCache ()
 
 @property (nonatomic, assign, readonly) NSUInteger memoryCacheSizeInBytes;
