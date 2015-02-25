@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332A5B6490F64A9F51956ABD /* CCHDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 332A50247CA00A0487F5696B /* CCHDiskCache.m */; };
 		47112FB71A34D19C000359A1 /* CCHMemoryCacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 47112FB61A34D19C000359A1 /* CCHMemoryCacheSpec.m */; };
 		4728990B1A9BA0F1008D96D8 /* CCHMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */; };
 		475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E6D1A32305100D44CA8 /* AppDelegate.m */; };
@@ -86,6 +87,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332A50247CA00A0487F5696B /* CCHDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHDiskCache.m; path = CCHCache/CCHDiskCache.m; sourceTree = "<group>"; };
+		332A57262971C119E6DA1DB3 /* CCHDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCHDiskCache.h; path = CCHCache/CCHDiskCache.h; sourceTree = "<group>"; };
 		47112FB61A34D19C000359A1 /* CCHMemoryCacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHMemoryCacheSpec.m; sourceTree = "<group>"; };
 		472899091A9BA0F1008D96D8 /* CCHMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCHMemoryCache.h; path = CCHCache/CCHMemoryCache.h; sourceTree = "<group>"; };
 		4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHMemoryCache.m; path = CCHCache/CCHMemoryCache.m; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				475D6E811A3230E400D44CA8 /* CCHCache.m */,
 				472899091A9BA0F1008D96D8 /* CCHMemoryCache.h */,
 				4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */,
+				332A57262971C119E6DA1DB3 /* CCHDiskCache.h */,
+				332A50247CA00A0487F5696B /* CCHDiskCache.m */,
 			);
 			name = CCHCache;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */,
 				475D6E781A32305100D44CA8 /* main.m in Sources */,
 				475D6E791A32305100D44CA8 /* ViewController.m in Sources */,
+				332A5B6490F64A9F51956ABD /* CCHDiskCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
