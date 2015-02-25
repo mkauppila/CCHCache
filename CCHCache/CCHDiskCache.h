@@ -6,16 +6,18 @@
 
 #import "CCHCache.h"
 
+typedef void (^CCHCacheCompletionBlock)(NSString *key, id <NSCopying> value);
+
 @interface CCHDiskCache : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithSize:(NSUInteger)sizeInBytes
-                    withName:(NSString *)name;
+                    withName:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
 - (void)objectForKey:(NSString *)key
       withCompletion:(CCHCacheCompletionBlock)completion;
 
-- (void)setObject:(id <NSCopying>)object
+- (void)setObject:(id <NSCopying>)value
            forKey:(NSString *)key
    withCompletion:(CCHCacheCompletionBlock)completion;
 
