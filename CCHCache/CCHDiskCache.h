@@ -11,8 +11,6 @@
 - (instancetype)initWithSize:(NSUInteger)sizeInBytes
                     withName:(NSString *)name;
 
-#pragma mark - Public API
-
 - (void)objectForKey:(NSString *)key
       withCompletion:(CCHCacheCompletionBlock)completion;
 
