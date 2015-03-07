@@ -99,9 +99,25 @@
 
 #pragma mark - External interface
 
-- (void)objectForKey:(__unused NSString *)key
-      withCompletion:(__unused CCHCacheCompletionBlock)completion
+- (void)objectForKey:(NSString *)key
+      withCompletion:(CCHCacheCompletionBlock)completion
 {
+    NSDate *const newModificationDate = [NSDate date];
+    NSString *const filePath = [[self diskCacheDirectoryPath] stringByAppendingPathComponent:key];
+
+    NSDictionary *newAttributes = @{
+        NSFileModificationDate: newModificationDate,
+    };
+
+    NSError *error;
+    BOOL didUpdate = [self.fileManager setAttributes:newAttributes
+                                        ofItemAtPath:filePath
+                                               error:&error];
+    if (!didUpdate && error) {
+        NSLog(@"Failed to update file attributes at pat: %@", filePath);
+        NSLog(@"    error: %@", error);
+    }
+
     NSString *filename = [[self diskCacheDirectoryPath] stringByAppendingPathComponent:key];
     id value = [NSKeyedUnarchiver unarchiveObjectWithFile:filename];
     completion(key, value);
