@@ -123,9 +123,9 @@
     completion(key, value);
 }
 
-- (void)setObject:(__unused id <NSCopying>)value
-           forKey:(__unused NSString *)key
-   withCompletion:(__unused CCHCacheCompletionBlock)completion
+- (void)setObject:(id <NSCopying>)value
+           forKey:(NSString *)key
+   withCompletion:(CCHCacheCompletionBlock)completion
 {
     NSString *filename = [[self diskCacheDirectoryPath] stringByAppendingPathComponent:key];
     BOOL didWrite = [NSKeyedArchiver archiveRootObject:value toFile:filename];
@@ -137,8 +137,8 @@
             NSLog(@"    error: %@", error);
         }
 
-        NSLog(@"date: %@", attributes[NSFileModificationDate]);
-        NSLog(@"size: %@", attributes[NSFileSize]);
+        self.fileSizesInBytes[filename] = attributes[NSFileSize];
+        self.fileModificationDates[filename] = attributes[NSFileModificationDate];
 
         NSLog(@"did store value %@", value);
         completion(key, value);
