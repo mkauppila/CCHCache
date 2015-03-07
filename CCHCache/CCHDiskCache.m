@@ -11,6 +11,9 @@
 @property (nonatomic, readonly) NSUInteger sizeInBytes;
 @property (nonatomic, copy, readonly) NSString *name;
 
+@property (nonatomic, copy) NSMutableDictionary *fileSizesInBytes;
+@property (nonatomic, copy) NSMutableDictionary *fileModificationDates;
+
 @end
 
 @implementation CCHDiskCache
@@ -25,9 +28,46 @@
     _name = name;
 
     _fileManager = [[NSFileManager alloc] init];
+
     [self createCacheDirectory];
+    [self initializeCacheContents];
 
     return self;
+}
+
+- (void)initializeCacheContents
+{
+    BOOL (^errorHandler)(NSURL *, NSError *) = ^BOOL(NSURL *url, NSError *error) {
+        NSLog(@"Error white enumerationg url: %@. Continuing enumeration", url);
+        NSLog(@"    error: %@", error);
+        return YES;
+    };
+
+    NSMutableDictionary *mutableModificationDates = [NSMutableDictionary new];
+    NSMutableDictionary *mutableFileSizes = [NSMutableDictionary new];
+
+    NSDirectoryEnumerator *directoryEnumerator =
+            [self.fileManager enumeratorAtURL:[NSURL URLWithString:[self diskCacheDirectoryPath]]
+                   includingPropertiesForKeys:@[NSURLAttributeModificationDateKey]
+                                      options:NSDirectoryEnumerationSkipsHiddenFiles
+                                 errorHandler:errorHandler];
+    for (NSURL *fileURL in directoryEnumerator) {
+        NSError *error;
+        NSDictionary *attributes = [self.fileManager attributesOfItemAtPath:[fileURL path] error:&error];
+        if (!attributes && error) {
+            NSLog(@"Error reading attributes from file path: %@", fileURL);
+            NSLog(@"    error: %@", error);
+        } else {
+            NSNumber *const fileSizeInBytes = attributes[NSFileSize];
+            NSDate *const modificationDate = attributes[NSFileModificationDate];
+            NSString *const filename = [fileURL lastPathComponent];
+
+            NSLog(@"%@: => %@ bytes, %@", filename, fileSizeInBytes, modificationDate);
+
+            mutableFileSizes[filename] = fileSizeInBytes;
+            mutableModificationDates[filename] = modificationDate;
+        }
+    }
 }
 
 - (void)createCacheDirectory
@@ -37,7 +77,7 @@
                                           withIntermediateDirectories:NO
                                                            attributes:nil
                                                                 error:&error];
-    if (!didCreateDirectory && error && [error code] != 516) {
+    if (!didCreateDirectory && error) {
         NSLog(@"Failed to create directory for disk cache '%@'", self.name);
         NSLog(@"    error: %@", error);
         NSLog(@"Might have already created");
