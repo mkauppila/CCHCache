@@ -33,11 +33,11 @@
 - (void)createCacheDirectory
 {
     NSError *error;
-    BOOL didCreateDirectory = [self.fileManager createDirectoryAtPath:[self diskCacheDirectory]
+    BOOL didCreateDirectory = [self.fileManager createDirectoryAtPath:[self diskCacheDirectoryPath]
                                           withIntermediateDirectories:NO
                                                            attributes:nil
                                                                 error:&error];
-    if (!didCreateDirectory && error) {
+    if (!didCreateDirectory && error && [error code] != 516) {
         NSLog(@"Failed to create directory for disk cache '%@'", self.name);
         NSLog(@"    error: %@", error);
         NSLog(@"Might have already created");
@@ -46,7 +46,7 @@
     }
 }
 
-- (NSString *)diskCacheDirectory
+- (NSString *)diskCacheDirectoryPath
 {
     static NSString *diskCacheDirectory;
     static dispatch_once_t predicate;
@@ -57,10 +57,12 @@
     return diskCacheDirectory;
 }
 
+#pragma mark - External interface
+
 - (void)objectForKey:(__unused NSString *)key
       withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
-    NSString *filename = [[self diskCacheDirectory] stringByAppendingPathComponent:key];
+    NSString *filename = [[self diskCacheDirectoryPath] stringByAppendingPathComponent:key];
     id value = [NSKeyedUnarchiver unarchiveObjectWithFile:filename];
     completion(key, value);
 }
@@ -69,7 +71,7 @@
            forKey:(__unused NSString *)key
    withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
-    NSString *filename = [[self diskCacheDirectory] stringByAppendingPathComponent:key];
+    NSString *filename = [[self diskCacheDirectoryPath] stringByAppendingPathComponent:key];
     BOOL didWrite = [NSKeyedArchiver archiveRootObject:value toFile:filename];
     if (didWrite) {
         NSError *error;
@@ -90,7 +92,7 @@
 - (void)removeObjectForKey:(__unused NSString *)key
             withCompletion:(__unused CCHCacheCompletionBlock)completion
 {
-    NSString *filename = [[self diskCacheDirectory] stringByAppendingPathComponent:key];
+    NSString *filename = [[self diskCacheDirectoryPath] stringByAppendingPathComponent:key];
     NSError *error;
     BOOL didRemove = [self.fileManager removeItemAtPath:filename error:&error];
     if (!didRemove && error) {
