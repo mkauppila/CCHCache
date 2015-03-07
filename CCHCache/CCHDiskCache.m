@@ -145,8 +145,8 @@
     }
 }
 
-- (void)removeObjectForKey:(__unused NSString *)key
-            withCompletion:(__unused CCHCacheCompletionBlock)completion
+- (void)removeObjectForKey:(NSString *)key
+            withCompletion:(CCHCacheCompletionBlock)completion
 {
     NSString *filename = [[self diskCacheDirectoryPath] stringByAppendingPathComponent:key];
     NSError *error;
@@ -155,6 +155,9 @@
         NSLog(@"Failed to remove file at %@", filename);
         NSLog(@"    error: %@", error);
     } else {
+        [self.fileSizesInBytes removeObjectForKey:key];
+        [self.fileModificationDates removeObjectForKey:key];
+
         completion(key, nil);
     }
 }
