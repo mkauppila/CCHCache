@@ -1,5 +1,7 @@
 # Cache Cache
 
+**Cache Cache is WORK UNDER PROGRESS. The project hasn't progressed that much yet and it's moving forward at a glacial pace**
+
 Cache Cache (hereafter abbreviated as CCHCache) is simple in-memory and
 disk cache. CCHCache provides simple, fast and convenient way to
 cache any object conforming NSCopying protocol.
@@ -21,6 +23,9 @@ you need to cache the images separate from the models.
 instead it lets the developer decide when to purge the in-memory cache.
 - It does not encourage using only one instance of the cache hence
   no shared singleton access
+
+Noteworthy things:
+- CCHCache is not optimal for small resources because  it'll add some 130 bytes of overhead per item.
 
 ## Basic usage
 
