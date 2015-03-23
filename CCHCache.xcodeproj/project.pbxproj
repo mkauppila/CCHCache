@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332A563E6C887ABD02B4F407 /* CCHDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 332A50247CA00A0487F5696B /* CCHDiskCache.m */; };
+		332A5B3B5058E70A613A64EB /* CCHMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */; };
 		332A5B6490F64A9F51956ABD /* CCHDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 332A50247CA00A0487F5696B /* CCHDiskCache.m */; };
+		332A5F82B4532E402414C530 /* CCHCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E811A3230E400D44CA8 /* CCHCache.m */; };
 		4728990B1A9BA0F1008D96D8 /* CCHMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4728990A1A9BA0F1008D96D8 /* CCHMemoryCache.m */; };
 		475D6E741A32305100D44CA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E6D1A32305100D44CA8 /* AppDelegate.m */; };
 		475D6E781A32305100D44CA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D6E711A32305100D44CA8 /* main.m */; };
@@ -18,6 +21,7 @@
 		475D6E8D1A32419B00D44CA8 /* Project.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 475D6E881A32419B00D44CA8 /* Project.xcconfig */; };
 		475D6E8E1A32419B00D44CA8 /* Tests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 475D6E891A32419B00D44CA8 /* Tests-Debug.xcconfig */; };
 		475D6E8F1A32419B00D44CA8 /* Tests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 475D6E8A1A32419B00D44CA8 /* Tests-Release.xcconfig */; };
+		4787FE541AB89E6400F565DD /* DiskCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4787FE531AB89E6400F565DD /* DiskCacheTest.m */; };
 		47A396981A3395260017736E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47A396971A3395260017736E /* Info.plist */; };
 		47A3969D1A3395860017736E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A396991A3395860017736E /* LaunchScreen.xib */; };
 		47A3969E1A3395860017736E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A3969B1A3395860017736E /* Main.storyboard */; };
@@ -41,6 +45,7 @@
 		475D6E881A32419B00D44CA8 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = Xcconfig/Project.xcconfig; sourceTree = "<group>"; };
 		475D6E891A32419B00D44CA8 /* Tests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Tests-Debug.xcconfig"; path = "Xcconfig/Tests-Debug.xcconfig"; sourceTree = "<group>"; };
 		475D6E8A1A32419B00D44CA8 /* Tests-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Tests-Release.xcconfig"; path = "Xcconfig/Tests-Release.xcconfig"; sourceTree = "<group>"; };
+		4787FE531AB89E6400F565DD /* DiskCacheTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCacheTest.m; sourceTree = "<group>"; };
 		47A396971A3395260017736E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/ExampleApp/Info.plist; sourceTree = SOURCE_ROOT; };
 		47A3969A1A3395860017736E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Example/ExampleApp/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		47A3969C1A3395860017736E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Example/ExampleApp/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -137,6 +142,7 @@
 		47A396A41A3398ED0017736E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4787FE531AB89E6400F565DD /* DiskCacheTest.m */,
 				47A396A51A3398ED0017736E /* Supporting Files */,
 			);
 			path = Tests;
@@ -273,6 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4787FE541AB89E6400F565DD /* DiskCacheTest.m in Sources */,
+				332A5F82B4532E402414C530 /* CCHCache.m in Sources */,
+				332A563E6C887ABD02B4F407 /* CCHDiskCache.m in Sources */,
+				332A5B3B5058E70A613A64EB /* CCHMemoryCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
